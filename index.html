@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio de Igor Gabriel de Souza Oliveira</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="#sobre">Igor Gabriel de Souza Oliveira</a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#skills">Skills</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button id="btn-tema" class="btn-tema" type="button">Tema</button>
+  </header>
+
+  <main>
+    <section id="sobre" class="apresentacao">
+      <img class="foto" src="assets/imgs/foto.png" alt="Foto de Igor Gabriel">
+      <div class="apresentacao-texto">
+        <p class="saudacao">Olá, eu sou</p>
+        <h1>Igor Gabriel</h1>
+        <p>Sou estudante de tecnologia na Universidade Tiradentes (Unit), em Aracaju-SE, e estou aprendendo a criar páginas e aplicações para a web com HTML, CSS e JavaScript.</p>
+        <a class="botao" href="#portfolio">Ver projetos</a>
+      </div>
+    </section>
+
+    <section id="portfolio" class="secao">
+      <h2>Portfólio</h2>
+      <div class="carrossel">
+        <button id="btn-anterior" class="seta" type="button" aria-label="Projetos anteriores">&lt;</button>
+
+        <div class="trilho" id="trilho-projetos">
+          <article class="card">
+            <div class="card-imagem">
+              <a href="assets/projects/lampada/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/lamp_on_off.png" alt="Foto de duas lâmpadas, uma ligada e outra desligada.">
+              </a>
+            </div>
+            <h3>Projeto lâmpada</h3>
+            <p>Acender e desligar uma lâmpada.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-imagem">
+              <a href="assets/projects/lista_tarefas/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/lista_tarefas.png" alt="Preview da tela inicial da lista de tarefas.">
+              </a>
+            </div>
+            <h3>Lista de tarefas</h3>
+            <p>Organização de tarefas do dia a dia.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-imagem">
+              <a href="assets/projects/calculadora/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/calculadora.png" alt="Preview da página da calculadora">
+              </a>
+            </div>
+            <h3>Calculadora</h3>
+            <p>Página onde se pode realizar cálculos</p>
+          </article>
+
+        </div>
+
+        <button id="btn-proximo" class="seta" type="button" aria-label="Próximos projetos">&gt;</button>
+      </div>
+    </section>
+
+    <section id="skills" class="secao">
+      <h2>Skills</h2>
+      <p>Habilidades que estou desenvolvendo.</p>
+
+      <div class="skill">
+        <div class="skill-cabecalho">
+          <span>HTML</span><span>75%</span>
+        </div>
+        <div class="barra">
+          <div class="nivel" data-nivel="75"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-cabecalho">
+          <span>CSS</span><span>60%</span>
+        </div>
+        <div class="barra">
+          <div class="nivel" data-nivel="60"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-cabecalho">
+          <span>JavaScript</span><span>35%</span>
+        </div>
+        <div class="barra">
+          <div class="nivel" data-nivel="35"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+      <div class="contato-grid">
+        <article class="card contato-card">
+          <h3>Vamos conversar?</h3>
+          <p>Entre em contato por e-mail ou acompanhe meus projetos e atualizações nas redes abaixo.</p>
+          
+          <p> <strong>E-mail:</strong> <a href="mailto:igorgabri.so@gmail.com">igorgabri.so@gmail.com</a></p>
+          <div class="contato-links" aria-label="Redes profissionais">
+
+          <a class="contato-link" href="https://github.com/Igor-Gabs119" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub ↗
+          </a>
+
+          <a class="contato-link" href="https://www.linkedin.com/in/igor-gabriel-de-souza-oliveira-3a478040a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+           <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn ↗
+          </a>
+
+          </div>
+          <iframe class="mapa" title="Mapa com a localização aproximada: Aracaju, Sergipe, Brasil" src="https://www.google.com/maps?q=Aracaju,+Sergipe,+Brasil&z=11&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </article>
+
+        <form id="form-contato" class="formulario" novalidate>
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Seu nome" required>
+
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="voce@exemplo.com" required>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+
+          <button class="botao" type="submit">Enviar</button>
+          <p id="retorno-formulario" role="status" aria-live="polite"></p>
+        </form>
+      </div>    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Igor Gabriel de Souza Oliveira · Portfólio pessoal</p>
+  </footer>
+</body>
+</html>
